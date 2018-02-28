@@ -1,5 +1,5 @@
 {
-  "name": "@bmsdave/ui-select",
+  "name": "bmsdave-ui-select",
   "main": "./index.js",
   "author": "http://github.com/angular-ui/ui-select/graphs/contributors",
   "homepage": "http://github.com/angular-ui/ui-select",
