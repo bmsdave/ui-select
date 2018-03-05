@@ -595,6 +595,7 @@ uis.controller('uiSelectCtrl',
         break;
       case KEY.TAB:
         if (!ctrl.multiple || ctrl.open) ctrl.select(ctrl.items[ctrl.activeIndex], true);
+        setTimeout(function () {angular.element(".ui-select-focusser", ctrl.$element).focus();}, 0);
         break;
       case KEY.ENTER:
         if(ctrl.open && (ctrl.tagging.isActivated || ctrl.activeIndex >= 0)){
@@ -659,7 +660,7 @@ uis.controller('uiSelectCtrl',
       _ensureHighlightVisible();
     }
 
-    if (key === KEY.ENTER || key === KEY.ESC) {
+    if (key === KEY.ENTER || key === KEY.ESC || key === KEY.TAB ) {
       e.preventDefault();
       e.stopPropagation();
     }

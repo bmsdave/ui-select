@@ -1,7 +1,7 @@
 /*!
  * bmsdave-ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2018-02-28T11:35:05.770Z
+ * Version: 0.19.9 - 2018-03-05T14:57:43.616Z
  * License: MIT
  */
 
@@ -897,6 +897,7 @@ uis.controller('uiSelectCtrl',
         break;
       case KEY.TAB:
         if (!ctrl.multiple || ctrl.open) ctrl.select(ctrl.items[ctrl.activeIndex], true);
+        setTimeout(function () {angular.element(".ui-select-focusser", ctrl.$element).focus();}, 0);
         break;
       case KEY.ENTER:
         if(ctrl.open && (ctrl.tagging.isActivated || ctrl.activeIndex >= 0)){
@@ -961,7 +962,7 @@ uis.controller('uiSelectCtrl',
       _ensureHighlightVisible();
     }
 
-    if (key === KEY.ENTER || key === KEY.ESC) {
+    if (key === KEY.ENTER || key === KEY.ESC || key === KEY.TAB ) {
       e.preventDefault();
       e.stopPropagation();
     }
