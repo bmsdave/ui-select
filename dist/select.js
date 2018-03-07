@@ -1,7 +1,7 @@
 /*!
  * bmsdave-ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.9 - 2018-03-05T14:57:43.616Z
+ * Version: 0.19.10 - 2018-03-07T12:16:30.864Z
  * License: MIT
  */
 
@@ -954,6 +954,8 @@ uis.controller('uiSelectCtrl',
             });
           }
         }
+      } else {
+        ctrl.close();
       }
 
     });

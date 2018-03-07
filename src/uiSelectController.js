@@ -652,6 +652,8 @@ uis.controller('uiSelectCtrl',
             });
           }
         }
+      } else {
+        ctrl.close();
       }
 
     });
