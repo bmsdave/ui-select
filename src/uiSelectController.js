@@ -652,10 +652,7 @@ uis.controller('uiSelectCtrl',
             });
           }
         }
-      } else {
-        ctrl.close();
       }
-
     });
 
     if(KEY.isVerticalMovement(key) && ctrl.items.length > 0){
